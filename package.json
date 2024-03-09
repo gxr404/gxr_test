@@ -1,6 +1,6 @@
 {
   "name": "gxr_test",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gxr404/gxr_test.git"
-  },
+  }
 }
