@@ -4,16 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node -r dotenv/config",
+    "release": "source .env & npx semantic-release"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "log4js": "^6.9.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gxr404/gxr_test.git"
+  },
+  "devDependencies": {
+    "@semantic-release/github": "^10.0.3",
+    "semantic-release": "^23.0.8"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            { "path": "test.js", "label": "test_js" }
+          ]
+        }
+      ]
+    ]
   }
 }
