@@ -17,6 +17,10 @@
 
       <div id="box">
         <p class="item" data-field="version"></p>
+        <p class="item" data-field="platform"></p>
+        <p class="item" data-field="platform"></p>
+        <p class="item" data-field="platform"></p>
+
       </div>
   </div>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -27,8 +31,14 @@
     const list = box.querySelectorAll('.item')
     list.forEach((el) => {
       const key = el.dataset['field']
-      el.innerText = appData[key]
+      const value =  appData[key]
+      el.innerText = typeof value === 'object' ? JSON.stringify(value) : value
     })
+    appData.MainButton.text = "Main Button"
+    appData.MainButton.textColor = '#c61717'
+    appData.MainButton.color = '#feeae4'
+    appData.MainButton.show()
+
   </script>
 </body>
 </html>
