@@ -26,7 +26,7 @@
     const box = document.getElementById('box')
     const list = box.querySelectorAll('.item')
     list.forEach((el) => {
-      const key = el.data('field')
+      const key = el.dataset('field')
       el.innerText = appData[key]
     })
   </script>
