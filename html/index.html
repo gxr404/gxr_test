@@ -4,16 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .box {
+      background-color: #fff;
+    }
+  </style>
 </head>
 <body>
   <div>
-    <p>12323</p>
       <!-- <img src="https://gxr404.github.io/gxr_test/311111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.jpg" alt="img">
       <img src="https://gxr404.github.io/gxr_test/11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.jpg" /> -->
+
+      <div id="box">
+        <p class="item" data-field="version"></p>
+      </div>
   </div>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script>
     console.log(window.Telegram.WebApp)
+    const appData = window.Telegram.WebApp
+    const box = document.getElementById('box')
+    const list = box.querySelectorAll('.item')
+    list.forEach((el) => {
+      const key = el.data('field')
+      el.innerText = appData[key]
+    })
   </script>
 </body>
 </html>
