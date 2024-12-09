@@ -20,7 +20,7 @@
     "url": "git+https://github.com/gxr404/gxr_test.git"
   },
   "devDependencies": {
-    "@semantic-release/github": "^10.0.3",
+    "@semantic-release/github": "^11.0.0",
     "semantic-release": "^24.0.0"
   },
   "release": {
