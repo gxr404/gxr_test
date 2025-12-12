@@ -83,7 +83,7 @@ jobs:
 
       # step6: upload artifacts
       - name: upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.os }}
           path: dist_electron
